@@ -1,0 +1,84 @@
+#container
+{
+	margin: 0 30px;
+	background: #fff;
+}
+
+#header
+{
+    background: #87CEEB;
+	padding: 20px;
+}
+
+#header h1 { margin: 0; }
+
+#companyLogo
+{
+    float: right;
+}
+
+#navigation
+{
+    list-style-type: none;
+	display: inline;
+	float: left;
+	width: calc(100% - 40px);
+    background:#4169E1;
+}
+
+#navigation ul
+{
+    list-style-type: none;
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+#navigation ul li
+{
+	list-style-type: none;
+	display: inline;
+}
+
+#navigation li a
+{
+	display: block;
+	float: left;
+	padding: 5px 10px;
+	color: #fff;
+	text-decoration: none;
+	border-right: 1px solid #fff;
+}
+
+#navigation li a:hover { background: #87CEEB; }
+
+#content {
+    position: relative;
+}
+#content img {
+    float: right;
+
+}
+
+
+#content
+{
+	clear: left;
+	padding: 20px;
+}
+
+#content h2
+{
+	color: #000; 
+	font-size: 160%;
+	margin: 0 0 .5em;
+}
+
+#footer
+{
+    background: #87CEEB;
+	text-align: right;
+	padding: 20px;
+	height: 1%;
+    margin-bottom: 10px;
+}

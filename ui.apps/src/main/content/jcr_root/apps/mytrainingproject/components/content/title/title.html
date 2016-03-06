@@ -1,0 +1,9 @@
+<div data-sly-test.vartest="${properties.title}">
+${vartest}
+</div>
+<div data-sly-test="${!vartest}">
+Enter some title here
+</div>
+
+<div data-sly-use.titlescript="title.js" data-sly-unwrap/>
+<h1 data-sly-element="${titlescript.type}">${titlescript.outputContent}</h1>
