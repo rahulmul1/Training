@@ -37,12 +37,13 @@ public class HelloWorldModel {
 
     @PostConstruct
     protected void init() {
-        message = "\tHello World Changed!1!1111111111\n";
+        message = "\tHello World Changed\n";
         message += "\tThis is instance: " + settings.getSlingId() + "\n";
         message += "\tResource type is: " + resourceType + "\n";
     }
 
     public String getMessage() {
         return message;
+        
     }
 }
