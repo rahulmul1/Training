@@ -38,6 +38,7 @@ public class ReplicationLogger implements EventHandler, JobConsumer {
 		return JobConsumer.JobResult.OK;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void handleEvent(Event event) {
 		String[] propertyNames = event.getPropertyNames();
