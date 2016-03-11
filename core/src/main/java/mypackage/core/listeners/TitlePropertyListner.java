@@ -17,9 +17,10 @@ import org.osgi.service.component.ComponentContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 /**
- * 
- * @author rahaggar
+ * The Class TitlePropertyListner.
  *
+ * @author rahaggar
+ * 
  * Adds listner which listens to any property change below the  
  * path /content/mytrainingprojecct. If the property changed is jcr:title 
  * it appends a "!" after the property value.
@@ -27,15 +28,26 @@ import org.slf4j.LoggerFactory;
 @Component
 public class TitlePropertyListner implements EventListener {
 
+	/** The sling repository. */
 	@Reference
 	SlingRepository slingRepository;
 
+	/** The observation manager. */
 	ObservationManager observationManager = null;
+	
+	/** The admin session. */
 	Session adminSession = null;
 
+	/** The Constant LOGGER. */
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(TitlePropertyListner.class);
 
+	/**
+	 * Activate.
+	 *
+	 * @param context the context
+	 * @throws Exception the exception
+	 */
 	@SuppressWarnings("deprecation")
 	protected void activate(ComponentContext context) throws Exception {
 		adminSession = slingRepository.loginAdministrative(slingRepository
@@ -50,6 +62,9 @@ public class TitlePropertyListner implements EventListener {
 		LOGGER.info("********added JCR event listener");
 	}
 
+	/* (non-Javadoc)
+	 * @see javax.jcr.observation.EventListener#onEvent(javax.jcr.observation.EventIterator)
+	 */
 	@Override
 	public void onEvent(EventIterator it) {
 		while (it.hasNext()) {
@@ -78,6 +93,11 @@ public class TitlePropertyListner implements EventListener {
 
 	}
 
+	/**
+	 * Deactivate.
+	 *
+	 * @param componentContext the component context
+	 */
 	protected void deactivate(ComponentContext componentContext) {
 		try {
 			if (observationManager != null) {
