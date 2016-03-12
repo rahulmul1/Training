@@ -19,3 +19,10 @@
 HelloWorldModel says: rahul
 ${hello.message}
 </pre>
+
+<template data-sly-template.dateFormat="${ @ date1, dateFormat1 }">
+    <div data-sly-use.formatter="${'mypackage.core.models.DateFormatting' @ date=date1,dateFormat=dateFormat1}">
+        Formatted value : ${formatter.formattedValue}
+    </div>
+</template>
+<div data-sly-call="${ dateFormat @ date1=currentPage.jcr:created, dateFormat1='dd/MM/yyyy' }"></div>

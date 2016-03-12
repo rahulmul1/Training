@@ -21,6 +21,7 @@ import org.slf4j.LoggerFactory;
  *
  * @author rahaggar
  * 
+ * JCR observation
  * Adds listner which listens to any property change below the  
  * path /content/mytrainingprojecct. If the property changed is jcr:title 
  * it appends a "!" after the property value.

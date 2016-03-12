@@ -18,19 +18,31 @@ import com.day.cq.replication.ReplicationAction;
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
 
+/**
+ * 
+ * Sling event hander and jobs
+ * 
+ * The Class ReplicationLogger.
+ */
 @Service
 @Component(immediate = true)
 @Property(name = "event.topics", value = ReplicationAction.EVENT_TOPIC)
 public class ReplicationLogger implements EventHandler, JobConsumer {
 
+	/** The resolver factory. */
 	@Reference
 	private ResourceResolverFactory resolverFactory;
 
+	/** The Constant LOGGER. */
 	private static final Logger LOGGER = LoggerFactory
 			.getLogger(ReplicationLogger.class);
 	
+	/** The administrative resource resolver. */
 	ResourceResolver administrativeResourceResolver = null;
 	
+	/* (non-Javadoc)
+	 * @see org.apache.sling.event.jobs.consumer.JobConsumer#process(org.apache.sling.event.jobs.Job)
+	 */
 	@Override
 	public JobConsumer.JobResult process(Job event) {
 		LOGGER.info("********processing job");
@@ -38,6 +50,9 @@ public class ReplicationLogger implements EventHandler, JobConsumer {
 		return JobConsumer.JobResult.OK;
 	}
 
+	/* (non-Javadoc)
+	 * @see org.osgi.service.event.EventHandler#handleEvent(org.osgi.service.event.Event)
+	 */
 	@SuppressWarnings("deprecation")
 	@Override
 	public void handleEvent(Event event) {
@@ -62,9 +77,7 @@ public class ReplicationLogger implements EventHandler, JobConsumer {
 			
 			if(page!=null){
 				LOGGER.info("title of page" + page.getTitle());
-			}
-			
-			
+			}		
 			
 		} catch (LoginException e) {
 			// TODO Auto-generated catch block
