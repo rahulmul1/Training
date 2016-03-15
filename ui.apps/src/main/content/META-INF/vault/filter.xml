@@ -5,4 +5,6 @@
     </filter>
     <filter root="/apps/sling" />
     <filter root="/etc/designs/mytrainingproject"/>
+	<filter root="/etc/importers/polling"/>
+	
 </workspaceFilter>
