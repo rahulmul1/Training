@@ -3,4 +3,4 @@
     jcr:description="templateModel"
     jcr:primaryType="cq:Component"
     jcr:title="templateModel"
-    sling:resourceSuperType="foundation/components/page"/>
+    sling:resourceSuperType="/apps/mytrainingproject/components/structure/basepage"/>
