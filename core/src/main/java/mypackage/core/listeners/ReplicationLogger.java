@@ -66,6 +66,7 @@ public class ReplicationLogger implements EventHandler, JobConsumer {
 		ReplicationAction replicationAction = ReplicationAction
 				.fromEvent(event);
 		try {
+			/*administrativeResourceResolver = resolverFactory.getServiceResourceResolver(null);*/
 			administrativeResourceResolver = resolverFactory
 					.getAdministrativeResourceResolver(null);
 

@@ -13,14 +13,25 @@ import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
 import org.apache.sling.commons.json.JSONException;
 import org.apache.sling.commons.json.JSONObject;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class MySafeMethodServlet.
+ * 
+ * http://localhost:4502/content/mytrainingprojecct/en.data.html
+ */
 @SlingServlet(resourceTypes = "mytrainingproject/components/structure/page", selectors = "data", methods = "GET")
 public class MySafeMethodServlet extends SlingSafeMethodsServlet {
 
+	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = -3960692666512058118L;
 
+	/** The repository. */
 	@Reference
 	private Repository repository;
 
+	/* (non-Javadoc)
+	 * @see org.apache.sling.api.servlets.SlingSafeMethodsServlet#doGet(org.apache.sling.api.SlingHttpServletRequest, org.apache.sling.api.SlingHttpServletResponse)
+	 */
 	@Override
 	protected void doGet(SlingHttpServletRequest request,
 			SlingHttpServletResponse response) throws ServletException,

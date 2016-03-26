@@ -1,0 +1,31 @@
+<div data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"></div>
+<div data-sly-call="${clientLib.all @categories='componentlab'}" data-sly-unwrap></div>
+
+
+<script type="text/javascript">
+  
+  $CQ(function () {
+        $CQ('.products').flexigrid({
+            url: "/bin/dev/queryProducts",
+            dataType: 'json',
+            
+            colModel: [
+             {display: 'Title', name: 'jcr:title', width: 200,sortable: true, align: 'left'},
+             {display: 'Price', name: 'jcr:price', width: 200,sortable: true, align: 'left'},
+             {display: 'Description', name: 'jcr:description',width: 200,sortable: true, align: 'left'}],
+             searchitems : [{display: 'Title', name : 'title',isdefault: true}],
+           
+             sortname: "title",
+            sortorder: "asc",
+            usepager: true,
+            title: "Product Grid",
+            useRp: true,
+            rp: 15,
+            showTableToggleBtn: false,
+            singleSelect: true,
+            width: 600,
+            height: 200
+        });
+  });
+</script>
+<table class="products"></table>
