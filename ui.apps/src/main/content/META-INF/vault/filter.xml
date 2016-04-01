@@ -6,5 +6,5 @@
     <filter root="/apps/sling" />
     <filter root="/etc/designs/mytrainingproject"/>
 	<filter root="/etc/importers/polling"/>
-	
+	<filter root="/apps/ctie-commons" />
 </workspaceFilter>

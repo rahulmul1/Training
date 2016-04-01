@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Multi Field"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Add">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <dashboard
+                        jcr:primaryType="nt:unstructured"
+                        fieldDescription="Enter Dashboard name"
+                        fieldLabel="Dashboard"
+                        name="./iDashboard"
+                        xtype="textfield"/>
+                    <pages
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Click '+' to add a new page"
+                        fieldLabel="URLs"
+                        hideLabel="false"
+                        name="./iItems"
+                        title="Pages"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            border="true"
+                            hideLabel="true"
+                            layout="form"
+                            padding="10px"
+                            width="1000"
+                            xtype="multi-field-panel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <page
+                                    jcr:primaryType="cq:Widget"
+                                    dName="page"
+                                    fieldDescription="Enter Page Name"
+                                    fieldLabel="Page Name"
+                                    width="60"
+                                    xtype="textfield"/>
+                                <path
+                                    jcr:primaryType="cq:Widget"
+                                    dName="path"
+                                    fieldDescription="Select Path"
+                                    fieldLabel="Path"
+                                    rootPath="/content"
+                                    xtype="pathfield"/>
+                            </items>
+                        </fieldConfig>
+                    </pages>
+                </items>
+            </tab1>
+        </items>
+    </items>
+</jcr:root>

@@ -1,1 +1,1 @@
-alert('loading js');
+console.log('loading js');
