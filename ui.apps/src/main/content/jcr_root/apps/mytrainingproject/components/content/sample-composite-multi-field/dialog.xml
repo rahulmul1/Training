@@ -22,7 +22,7 @@
                         fieldDescription="Click '+' to add a new page"
                         fieldLabel="URLs"
                         hideLabel="false"
-                        name="./iItems"
+                        name="./pages"
                         title="Pages"
                         xtype="multifield">
                         <fieldConfig

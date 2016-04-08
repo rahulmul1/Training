@@ -4,13 +4,13 @@
 <%@page session="false" %>
 
 <div style="display: block; border-style: solid; border-width: 1px; margin: 10px; padding: 10px">
-    <b>Multi Field Sample Dashboard</b>
+    <b>Multi Field Sample ${properties['dashboard']}</b>
 
     <br><br>
 
 <%
     try {
-        String[] dashboards = { "iItems", "uItems" } ;
+        String[] dashboards = { "pages" } ;
 
         for(String dash : dashboards){
             Property property = null;
