@@ -1,3 +1,4 @@
 #base=scripts
 simple.js
 classicui-composite-multi-field.js
+jquery.clingify.min.js

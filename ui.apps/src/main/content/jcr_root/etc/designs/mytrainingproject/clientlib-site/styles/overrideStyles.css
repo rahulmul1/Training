@@ -1,0 +1,146 @@
+.bg-white {
+	background-color:white;
+    color:#000000;
+    padding:20px 0px 15px 0px;
+    border-bottom:solid 1px #55a79a;
+    margin:0px;
+    transition:background-color 0.4s ease-in;
+    -webkit-transition: background-color 0.4s ease-in;
+    -moz-transition: background-color 0.4s ease-in;
+}
+.bg-white-transparent {
+	background-color:rgba(255,255,255,0.9);
+}
+
+.header-upper {
+   background-color:#55a79a;
+   color:#FFFFFF;
+   height:45px;
+}
+
+#mob-userinfo {
+	padding: 0px 15px 0px;
+	/* resetting the styles applied by the geo-gov clientlib */    
+	margin:0px;
+    position:relative;
+    right:0px;
+}
+
+#mob-userinfo .user {
+	background-color:transparent;
+	border: solid 1px #f4faf8;
+	color:#f4faf8;
+    background-image:none;
+    border-radius:2px;
+    outline:none;
+}
+
+#mob-userinfo .user:hover {
+	background-color:#f4faf8;
+	color:#55a79a;    
+}
+
+
+.userinfo {
+	margin: 10px 20px 0px 0px;
+    font-size:12px;
+}
+
+@media all {
+    html, body {
+      padding:0px;
+    }
+}
+
+.company-logo,
+.company-tagline {
+	display:inline-block;
+}
+
+.company-tagline {
+	margin: 8px 10px 0px 0px;
+    border-left: 1px solid #D2D2D2;
+    color: #888;
+    font-size:14px;
+    padding:4px 0px 4px 10px;
+}
+
+#mobile-navbar #topnav > li > a {
+    color:#888;	
+}
+
+.bg-white.navbar-default .navbar-nav > li > a {
+    color:#888;
+	font-weight:bold;
+    font-size:14px;
+    font-variant:small-caps;
+    padding-bottom:0px;
+}
+
+.bg-white.navbar-default .navbar-nav > li > a:hover {
+	border-bottom: solid 1px #55a79a;
+}
+
+#footer {
+	height:auto;    
+}
+
+#footer .btn-success {
+	background-color:#55a79a;
+}
+
+#footer ul li span {
+	padding: 0px 0px 0px 12px;
+}
+
+.textimage .clear{
+    clear:both;
+}
+
+.menu-section {
+    position:relative;
+}
+
+#menu_click {
+	background-color:rgb(0,0,0);
+    color:#f4faf8;
+    font-size:20px;
+    line-height:20px;
+    text-shadow: 0px -1px 0px #888;
+}
+
+#menu_click:hover {
+	background-color:#55a79a;
+}
+
+@media(max-width:767px) {
+    #mobile-navbar {
+	    right:0px; 
+    	left:initial;
+    	top:50px;
+		margin-right:5px;
+    	border-radius:4px;
+    	padding:0px;
+    	background-color:#1b1b1b;
+    }
+    #mobile-navbar #topnav > li > a {
+		color: rgba(255,255,255,0.8);
+    	padding:12px 15px 2px 15px;
+    }
+	#mobile-navbar #topnav > li > a:hover {
+		color: #fff;
+    	background-color: #55a79a;
+    }
+
+    .bg-white.navbar-default .navbar-nav > li > a:hover {
+        border-bottom:none;
+    }
+
+    #mobile-navbar .navbar-nav {
+		margin:0px;
+    }
+}
+
+#mobile-navbar #topnav > li:last-child {
+	margin-left:0px;
+}
