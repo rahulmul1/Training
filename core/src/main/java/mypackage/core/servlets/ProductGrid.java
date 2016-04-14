@@ -90,6 +90,11 @@ public class ProductGrid extends SlingAllMethodsServlet {
 		}
 
 		finally {
+
+			if (serviceSession != null && serviceSession.isLive()) {
+				serviceSession.logout();
+			}
+		
 		}
 	}
 }
