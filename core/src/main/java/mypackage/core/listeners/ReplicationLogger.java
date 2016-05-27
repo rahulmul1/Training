@@ -1,5 +1,8 @@
 package mypackage.core.listeners;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Property;
 import org.apache.felix.scr.annotations.Reference;
@@ -53,7 +56,6 @@ public class ReplicationLogger implements EventHandler, JobConsumer {
 	/* (non-Javadoc)
 	 * @see org.osgi.service.event.EventHandler#handleEvent(org.osgi.service.event.Event)
 	 */
-	@SuppressWarnings("deprecation")
 	@Override
 	public void handleEvent(Event event) {
 		String[] propertyNames = event.getPropertyNames();
@@ -67,9 +69,16 @@ public class ReplicationLogger implements EventHandler, JobConsumer {
 				.fromEvent(event);
 		try {
 			/*administrativeResourceResolver = resolverFactory.getServiceResourceResolver(null);*/
+			/*administrativeResourceResolver = resolverFactory
+					.getAdministrativeResourceResolver(null);*/
+			
+			Map<String, Object> paramMap = new HashMap<String, Object>();
+			// Mention the subServiceName you had used in the User Mapping
+			paramMap.put(ResourceResolverFactory.SUBSERVICE, "getResResolver");
+			LOGGER.info("After the param");
 			administrativeResourceResolver = resolverFactory
-					.getAdministrativeResourceResolver(null);
-
+					.getServiceResourceResolver(paramMap);
+            
 			LOGGER.info("Rep path - " + replicationAction.getPath()
 					+ " , Rep type" + replicationAction.getType()+" , " +replicationAction.getType().getName());
 			
