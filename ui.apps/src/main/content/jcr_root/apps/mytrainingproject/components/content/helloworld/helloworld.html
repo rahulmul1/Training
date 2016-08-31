@@ -20,6 +20,12 @@ HelloWorldModel says: rahul
 ${hello.message}
 </pre>
 
+<!-- 
+template is just a dummy thing. here the template name is dateformat and its params are date1 and dateformat1
+. now when data-sly-call is used it assigns values to the params. 
+In this case these values are passed on to dateformatting model.
+ -->
+ 
 <template data-sly-template.dateFormat="${ @ date1, dateFormat1 }">
     <div data-sly-use.formatter="${'mypackage.core.models.DateFormatting' @ date=date1,dateFormat=dateFormat1}">
         Formatted value : ${formatter.formattedValue}
