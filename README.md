@@ -1,6 +1,4 @@
-#Intro
-
-Adobe AEM enablement training 2016 may. 1st training in adobe for 6 weeks.
+# Adobe AEM enablement training 2016 may. 1st training in adobe for 6 weeks.
 
 # Sample AEM project template
 
